@@ -20,7 +20,7 @@ const MainLayout = (props) => {
 	useLayoutEffect(() => {
 		if (firstUpdate.current) {
 			if (type === 'all') {
-				const url = `https://api-eu-central-1.graphcms.com/v2/${process.env.API2}/master`;
+				const url = process.env.API;
 				const start = async () => {
 					const query = gql`
 						query PlaceQuery($loadMore: Int!) {

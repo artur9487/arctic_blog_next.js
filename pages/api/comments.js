@@ -2,7 +2,7 @@
 
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-import { GraphQLClient, gql, request } from 'graphql-request';
+import { GraphQLClient, gql } from 'graphql-request';
 
 export default async function handler(req, res) {
 	const graphQLClient = new GraphQLClient(process.env.API, {
