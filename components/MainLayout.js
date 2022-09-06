@@ -20,7 +20,8 @@ const MainLayout = (props) => {
 	useLayoutEffect(() => {
 		if (firstUpdate.current) {
 			if (type === 'all') {
-				const url = process.env.API;
+				const url =
+					'https://api-eu-central-1.hygraph.com/v2/cl10szcbx0rd401z04l0ldt9g/master';
 				const start = async () => {
 					const query = gql`
 						query PlaceQuery($loadMore: Int!) {
