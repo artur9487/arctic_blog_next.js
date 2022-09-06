@@ -7,7 +7,7 @@ import { GraphQLClient, gql } from 'graphql-request';
 export default async function handler(req, res) {
 	const graphQLClient = new GraphQLClient(process.env.API, {
 		headers: {
-			authorization: TOKEN
+			authorization: process.env.TOKEN
 		}
 	});
 
