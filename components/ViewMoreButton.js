@@ -6,7 +6,7 @@ import { Box, Typography } from '@mui/material';
 
 import styles from '/styles/Home.module.scss';
 
-const ViewMoreButton = ({ matches }) => {
+const ViewMoreButton = ({ maxWidth900 }) => {
 	const { setLoadMore, data } = useContext(Context);
 
 	const handler = async () => {
@@ -19,7 +19,7 @@ const ViewMoreButton = ({ matches }) => {
 				justifyContent: 'center',
 				alignItems: 'center',
 				height: 100,
-				width: matches ? 200 : '100%'
+				width: maxWidth900 ? 200 : '100%'
 			}}>
 			<Box>
 				<button className={styles.button} onClick={() => handler()}>

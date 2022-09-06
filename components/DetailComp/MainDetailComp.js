@@ -22,7 +22,7 @@ const MainDetailComp = ({
 	placeName,
 	chips
 }) => {
-	const { matches3 } = useContext(Context);
+	const { maxWidth600 } = useContext(Context);
 	return (
 		<Card
 			sx={{
@@ -41,7 +41,7 @@ const MainDetailComp = ({
 				sx={{
 					mt: 3,
 					width: '100%',
-					height: !matches3 ? 500 : 300,
+					height: !maxWidth600 ? 500 : 300,
 					position: 'relative',
 					borderRadius: 5,
 					overflow: 'hidden'
@@ -92,7 +92,7 @@ const MainDetailComp = ({
 					}}
 					variant='body1'
 					color='black'
-					fontSize={!matches3 ? 15 : 14}>
+					fontSize={!maxWidth600 ? 15 : 14}>
 					{description}
 				</Typography>
 			</CardContent>

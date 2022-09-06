@@ -14,8 +14,8 @@ const MainLayout = (props) => {
 	const [loadMore, setLoadMore] = useState(result.length);
 	const [data, setData] = useState(result);
 	const firstUpdate = useRef(true);
-	const matches = useMediaQuery('(max-width:900px)');
-	const matches3 = useMediaQuery('(max-width:600px)');
+	const maxWidth900 = useMediaQuery('(max-width:900px)');
+	const maxWidth600 = useMediaQuery('(max-width:600px)');
 
 	useLayoutEffect(() => {
 		if (firstUpdate.current) {
@@ -54,7 +54,15 @@ const MainLayout = (props) => {
 
 	return (
 		<Context.Provider
-			value={{ data, result2, result3, setLoadMore, type, matches, matches3 }}>
+			value={{
+				data,
+				result2,
+				result3,
+				setLoadMore,
+				type,
+				maxWidth900,
+				maxWidth600
+			}}>
 			<Box sx={{ position: 'relative' }}>
 				<Layout>
 					<>

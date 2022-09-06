@@ -36,14 +36,14 @@ const CommentForm = ({
 	errorsy,
 	succesMsg
 }) => {
-	const { matches3 } = useContext(Context);
+	const { maxWidth600 } = useContext(Context);
 	const TextComp = ({ title }) => {
 		return (
 			<Typography
 				sx={{
 					fontFamily: 'Playfair Display',
 					fontStyle: 'italic',
-					fontSize: !matches3 ? 18 : 16
+					fontSize: !maxWidth600 ? 18 : 16
 				}}>
 				{title}
 			</Typography>

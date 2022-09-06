@@ -17,8 +17,8 @@ import { useMediaQuery } from '@mui/material';
 import styles from '/styles/Home.module.scss';
 
 const Details = ({ result, result2, result3 }) => {
-	const matches = useMediaQuery('(max-width:900px)');
-	const matches3 = useMediaQuery('(max-width:600px)');
+	const maxWidth900 = useMediaQuery('(max-width:900px)');
+	const maxWidth600 = useMediaQuery('(max-width:600px)');
 	const [email, setEmail] = useState('');
 	const [opinion, setOpinion] = useState('');
 	const [name, setName] = useState('');
@@ -88,9 +88,9 @@ const Details = ({ result, result2, result3 }) => {
 	};
 	return (
 		<>
-			<Context.Provider value={{ matches, matches3 }}>
+			<Context.Provider value={{ maxWidth900, maxWidth600 }}>
 				<Layout>
-					<Box sx={{ p: !matches3 ? 6 : 2 }} className={styles.fade600}>
+					<Box sx={{ p: !maxWidth600 ? 6 : 2 }} className={styles.fade600}>
 						<Stack spacing={4} direction='column'>
 							<AnimationComp>
 								<MainDetailComp

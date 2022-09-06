@@ -18,7 +18,7 @@ const CardElement = (props) => {
 	const { description, photo, placeName, id } = props.item.node;
 	const { length, indx } = props;
 	const myRef = useRef(null);
-	const { type, matches3 } = useContext(Context);
+	const { type, maxWidth600 } = useContext(Context);
 
 	useEffect(() => {
 		if (type === 'all') {
@@ -37,7 +37,7 @@ const CardElement = (props) => {
 			<Card
 				sx={{
 					margin: 'auto',
-					minWidth: !matches3 ? 400 : 300,
+					minWidth: !maxWidth600 ? 400 : 300,
 					maxWidth: '70%',
 					display: 'flex',
 					justifyContent: 'center',
@@ -75,7 +75,7 @@ const CardElement = (props) => {
 					<Typography
 						sx={{ fontFamily: 'Playfair Display', fontStyle: 'italic' }}
 						gutterBottom
-						variant={!matches3 ? 'h4' : 'h5'}
+						variant={!maxWidth600 ? 'h4' : 'h5'}
 						component='div'>
 						{placeName}
 					</Typography>
@@ -87,7 +87,7 @@ const CardElement = (props) => {
 								<Typography
 									sx={{
 										fontFamily: 'Playfair Display',
-										fontSize: !matches3 ? 15 : 13
+										fontSize: !maxWidth600 ? 15 : 13
 									}}>
 									Show Details
 								</Typography>

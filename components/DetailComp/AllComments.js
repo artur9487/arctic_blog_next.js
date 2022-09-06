@@ -6,7 +6,7 @@ import { Context } from '../../ContextComp';
 import { useContext } from 'react';
 
 const AllComments = ({ result3 }) => {
-	const { matches3 } = useContext(Context);
+	const { maxWidth600 } = useContext(Context);
 	return (
 		<Stack direction='column' spacing={4}>
 			{result3.map((item, indx) => {
@@ -17,7 +17,7 @@ const AllComments = ({ result3 }) => {
 							<Typography
 								sx={{
 									fontFamily: 'Playfair Display',
-									fontSize: !matches3 ? 20 : 17
+									fontSize: !maxWidth600 ? 20 : 17
 								}}
 								fontWeight='bold'>
 								{author}
@@ -25,7 +25,7 @@ const AllComments = ({ result3 }) => {
 							<Typography
 								sx={{
 									fontFamily: 'Playfair Display',
-									fontSize: !matches3 ? 17 : 14,
+									fontSize: !maxWidth600 ? 17 : 14,
 									color: 'gray',
 									fontStyle: 'italic'
 								}}>
@@ -35,7 +35,7 @@ const AllComments = ({ result3 }) => {
 						<Typography
 							sx={{
 								fontFamily: 'Playfair Display',
-								fontSize: !matches3 ? 17 : 15
+								fontSize: !maxWidth600 ? 17 : 15
 							}}>
 							{comment}
 						</Typography>
