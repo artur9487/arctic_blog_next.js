@@ -4,8 +4,9 @@ import Navbar from '../components/Navbar';
 import '../styles/globals.css';
 import FadeWrapper from '../components/FadeWrapper';
 import Head from 'next/head';
+import type { AppProps } from 'next/app';
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<>
 			<Head>

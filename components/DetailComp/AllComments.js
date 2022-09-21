@@ -5,11 +5,11 @@ import moment from 'moment';
 import { Context } from '../../ContextComp';
 import { useContext } from 'react';
 
-const AllComments = ({ result3 }) => {
+const AllComments = ({ mostCommentedOutput }) => {
 	const { maxWidth600 } = useContext(Context);
 	return (
 		<Stack direction='column' spacing={4}>
-			{result3.map((item, indx) => {
+			{mostCommentedOutput.map((item, indx) => {
 				const { author, comment, createdAt } = item.node;
 				return (
 					<Stack key={indx} spacing={2} direction='column'>

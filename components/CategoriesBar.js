@@ -11,7 +11,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 const CategoriesBar = () => {
-	const { result2 } = useContext(Context);
+	const { categoriesOutput } = useContext(Context);
 	const router = useRouter();
 	const slug = router.asPath.slice(1);
 
@@ -60,7 +60,7 @@ const CategoriesBar = () => {
 					</Typography>
 					<Divider light />
 				</Box>
-				{result2.map((item, indx) => {
+				{categoriesOutput.map((item, indx) => {
 					return (
 						<Box key={indx} sx={{ width: '100%', mb: 2 }}>
 							<Typography

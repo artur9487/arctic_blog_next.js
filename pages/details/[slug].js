@@ -10,13 +10,12 @@ import SimiliarDetailComp from '../../components/DetailComp/SimiliarDetailComp';
 import CommentForm from '../../components/DetailComp/CommentForm';
 import AllComments from '../../components/DetailComp/AllComments';
 import AnimationComp from '../../components/AnimationComp';
-import { handleSubmit } from '../../public/fetchek';
 import DetailCard from '../../components/DetailComp/DetailCard';
 import { Context } from '../../ContextComp';
 import { useMediaQuery } from '@mui/material';
 import styles from '/styles/Home.module.scss';
 
-const Details = ({ result, result2, result3 }) => {
+const Details = ({ placesOutput, categoriesOutput, mostCommentedOutput }) => {
 	const maxWidth900 = useMediaQuery('(max-width:900px)');
 	const maxWidth600 = useMediaQuery('(max-width:600px)');
 	const [email, setEmail] = useState('');
@@ -38,7 +37,7 @@ const Details = ({ result, result2, result3 }) => {
 	const [errorsy, setErrorsy] = useState(initialErr);
 
 	const { description, localization, photo, createdAt, chips, placeName, id } =
-		result[0].node;
+		placesOutput[0].node;
 
 	const { latitude, longitude } = localization;
 
@@ -71,7 +70,7 @@ const Details = ({ result, result2, result3 }) => {
 
 		const obj = { name, email, opinion, id };
 
-		const result = await fetch('/api/comments', {
+		const placesOutput = await fetch('/api/comments', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
@@ -84,7 +83,7 @@ const Details = ({ result, result2, result3 }) => {
 		setOpinion('');
 		setName('');
 		setSuccesMsg(true);
-		return result.json();
+		return placesOutput.json();
 	};
 	return (
 		<>
@@ -108,7 +107,7 @@ const Details = ({ result, result2, result3 }) => {
 							</AnimationComp>
 							<AnimationComp>
 								<DetailCard title='Similiar Posts:'>
-									<SimiliarDetailComp result2={result2} />
+									<SimiliarDetailComp categoriesOutput={categoriesOutput} />
 								</DetailCard>
 							</AnimationComp>
 							<AnimationComp>
@@ -128,7 +127,7 @@ const Details = ({ result, result2, result3 }) => {
 							</AnimationComp>
 							<AnimationComp>
 								<DetailCard title='All Comments:'>
-									<AllComments result3={result3} />
+									<AllComments mostCommentedOutput={mostCommentedOutput} />
 								</DetailCard>
 							</AnimationComp>
 						</Stack>
@@ -169,9 +168,9 @@ export async function getServerSideProps(context) {
 
 	const variables = { slug };
 
-	const proResult = await request(url, query, variables);
-	const result = proResult.placesSConnection.edges;
-	const { category, id } = result[0].node;
+	const response = await request(url, query, variables);
+	const placesOutput = response.placesSConnection.edges;
+	const { category, id } = placesOutput[0].node;
 
 	const query2 = gql`
 		query ($category: String!, $id: ID!) {
@@ -206,11 +205,11 @@ export async function getServerSideProps(context) {
 	const variables2 = { category, id };
 
 	const proResult2 = await request(url, query2, variables2);
-	const result2 = proResult2.placesSConnection.edges;
-	const result3 = proResult2.commentSConnection.edges;
+	const categoriesOutput = proResult2.placesSConnection.edges;
+	const mostCommentedOutput = proResult2.commentSConnection.edges;
 
 	return {
-		props: { result, result2, result3 }
+		props: { placesOutput, categoriesOutput, mostCommentedOutput }
 	};
 }
 

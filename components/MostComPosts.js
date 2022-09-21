@@ -8,7 +8,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 
 const MostComPosts = () => {
-	const { result3 } = useContext(Context);
+	const { mostCommentedOutput } = useContext(Context);
 
 	return (
 		<Card
@@ -29,7 +29,7 @@ const MostComPosts = () => {
 				Most Commented posts:
 			</Typography>
 			<CardContent sx={{ px: 0 }}>
-				{result3.map((item, indx) => {
+				{mostCommentedOutput.map((item, indx) => {
 					return <LatestSingelPost key={indx} {...item} />;
 				})}
 			</CardContent>

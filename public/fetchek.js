@@ -1,7 +1,7 @@
 /** @format */
 
 export const handleSubmit = async (obj) => {
-	const result = await fetch('/api/comments', {
+	const placesOutput = await fetch('/api/comments', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -9,5 +9,5 @@ export const handleSubmit = async (obj) => {
 		},
 		body: JSON.stringify(obj)
 	});
-	return result.json();
+	return placesOutput.json();
 };

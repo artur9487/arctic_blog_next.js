@@ -10,9 +10,9 @@ import { request, gql } from 'graphql-request';
 import { useMediaQuery } from '@mui/material';
 
 const MainLayout = (props) => {
-	const { result, result2, type, result3 } = props;
-	const [loadMore, setLoadMore] = useState(result.length);
-	const [data, setData] = useState(result);
+	const { placesOutput, categoriesOutput, type, mostCommentedOutput } = props;
+	const [loadMore, setLoadMore] = useState(placesOutput.length);
+	const [data, setData] = useState(placesOutput);
 	const firstUpdate = useRef(true);
 	const maxWidth900 = useMediaQuery('(max-width:900px)');
 	const maxWidth600 = useMediaQuery('(max-width:600px)');
@@ -44,8 +44,8 @@ const MainLayout = (props) => {
 
 					const variables = { loadMore };
 
-					const proResult = await request(url, query, variables);
-					const endResult = proResult.placesSConnection.edges;
+					const response = await request(url, query, variables);
+					const endResult = response.placesSConnection.edges;
 					setData(endResult);
 				};
 				start();
@@ -57,8 +57,8 @@ const MainLayout = (props) => {
 		<Context.Provider
 			value={{
 				data,
-				result2,
-				result3,
+				categoriesOutput,
+				mostCommentedOutput,
 				setLoadMore,
 				type,
 				maxWidth900,

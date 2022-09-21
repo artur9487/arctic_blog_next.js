@@ -1,56 +1,26 @@
 /** @format */
 
-import MainContent from '../../components/MainContent';
-import MainLayout from '../../components/MainLayout';
 import { gql, request } from 'graphql-request';
+import {
+	home_schema,
+	placeResponse_schema,
+	placesOutput_schema,
+	categoryResponse_schema,
+	categoryNodes_schema,
+	mostCommenteArr_schema,
+	mostCommentedVaules_schema,
+	mostCommentedResponse_schema
+} from './globalTypes';
 
-const CategoryComponent = ({
-	placesOutput,
-	categoriesOutput,
-	mostCommentedOutput
-}) => {
-	console.log(categoriesOutput);
-	return (
-		<MainLayout
-			placesOutput={placesOutput}
-			categoriesOutput={categoriesOutput}
-			mostCommentedOutput={mostCommentedOutput}
-			type='category'>
-			<MainContent />
-		</MainLayout>
-	);
-};
-
-export async function getStaticPaths() {
-	const url = process.env.API;
-	const query4 = gql`
-		query MyQuery {
-			placesSConnection {
-				edges {
-					node {
-						category
-					}
-				}
-			}
-		}
-	`;
-	const proResult7 = await request(url, query4);
-	const result4 = proResult7.placesSConnection.edges;
-
-	return {
-		paths: result4.map((item) => {
-			return { params: { slug: item.node.category } };
-		}),
-
-		fallback: false // false or 'blocking'
-	};
-}
-
-export async function getStaticProps(context) {
-	const slug = context.params.slug;
-	const url = process.env.API;
-
-	const query = gql`
+export const categoryFetchFunction: (
+	slug: any,
+	url: any
+) => Promise<{
+	placesOutput: any;
+	categoriesOutput: unknown[];
+	mostCommentedOutput: any[];
+}> = async (slug, url) => {
+	const query: string = gql`
 		query ($slug: String!) {
 			placesSConnection(where: { category: $slug }) {
 				edges {
@@ -72,8 +42,9 @@ export async function getStaticProps(context) {
 
 	const variabless = { slug };
 
-	const response = await request(url, query, variabless);
-	const placesOutput = response.placesSConnection.edges;
+	const placesResponse = await request(url, query, variabless);
+
+	const placesOutput = placesResponse.placesSConnection.edges;
 
 	const query2 = gql`
 		query PlaceQuery {
@@ -138,17 +109,15 @@ export async function getStaticProps(context) {
 		mostCommentedOutput.push({ ...mostCommentedVaules, count: commentCount });
 	};
 
-	await fetchMostCommented();
-	if (mostCommentedArr.length > 0) {
-		await fetchMostCommented();
-		if (mostCommentedArr.length > 0) {
+	for (let i = 0; i <= 2; i++) {
+		if (mostCommentedArr.length > i) {
 			await fetchMostCommented();
 		}
 	}
-
 	return {
-		props: { placesOutput, categoriesOutput, mostCommentedOutput }
+		placesOutput,
+		categoriesOutput,
+		mostCommentedOutput,
+		placesResponse
 	};
-}
-
-export default CategoryComponent;
+};

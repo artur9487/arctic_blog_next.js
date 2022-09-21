@@ -14,7 +14,7 @@ import Image from 'next/image';
 import styles from '/styles/Home.module.scss';
 import Link from 'next/link';
 
-const SimiliarDetailComp = ({ result2 }) => {
+const SimiliarDetailComp = ({ categoriesOutput }) => {
 	return (
 		<Grid
 			className={styles.fade1}
@@ -24,7 +24,7 @@ const SimiliarDetailComp = ({ result2 }) => {
 			direction='row'
 			alignItems='center'
 			justifyContent='center'>
-			{result2.map((item, indx) => {
+			{categoriesOutput.map((item, indx) => {
 				const { placeName, photo, createdAt, id } = item.node;
 				return (
 					<Grid

@@ -1,15 +1,15 @@
 /** @format */
 
-import MainContent from '../../components/MainContent';
-import MainLayout from '../../components/MainLayout';
+import MainContent from '../components/MainContent';
+import MainLayout from '../components/MainLayout';
 import { gql, request } from 'graphql-request';
+import { home_schema } from '../components/globalComponents/globalTypes';
 
-const CategoryComponent = ({
+const Architectural: React.FC<home_schema> = ({
 	placesOutput,
 	categoriesOutput,
 	mostCommentedOutput
 }) => {
-	console.log(categoriesOutput);
 	return (
 		<MainLayout
 			placesOutput={placesOutput}
@@ -21,33 +21,8 @@ const CategoryComponent = ({
 	);
 };
 
-export async function getStaticPaths() {
-	const url = process.env.API;
-	const query4 = gql`
-		query MyQuery {
-			placesSConnection {
-				edges {
-					node {
-						category
-					}
-				}
-			}
-		}
-	`;
-	const proResult7 = await request(url, query4);
-	const result4 = proResult7.placesSConnection.edges;
-
-	return {
-		paths: result4.map((item) => {
-			return { params: { slug: item.node.category } };
-		}),
-
-		fallback: false // false or 'blocking'
-	};
-}
-
 export async function getStaticProps(context) {
-	const slug = context.params.slug;
+	const slug = 'Architectural';
 	const url = process.env.API;
 
 	const query = gql`
@@ -138,10 +113,8 @@ export async function getStaticProps(context) {
 		mostCommentedOutput.push({ ...mostCommentedVaules, count: commentCount });
 	};
 
-	await fetchMostCommented();
-	if (mostCommentedArr.length > 0) {
-		await fetchMostCommented();
-		if (mostCommentedArr.length > 0) {
+	for (let i = 0; i <= 2; i++) {
+		if (mostCommentedArr.length > i) {
 			await fetchMostCommented();
 		}
 	}
@@ -151,4 +124,4 @@ export async function getStaticProps(context) {
 	};
 }
 
-export default CategoryComponent;
+export default Architectural;
