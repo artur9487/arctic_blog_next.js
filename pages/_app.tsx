@@ -1,8 +1,6 @@
 /** @format */
 
-import Navbar from '../components/Navbar';
 import '../styles/globals.css';
-import FadeWrapper from '../components/FadeWrapper';
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
 
@@ -11,13 +9,13 @@ function MyApp({ Component, pageProps }: AppProps) {
 		<>
 			<Head>
 				<title>Cool Places Blog</title>
+				<link rel='preconnect' href='https://fonts.googleapis.com' />
+				<link rel='preconnect' href='https://fonts.gstatic.com' />
 				<link
-					href='https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Courgette&family=Dancing+Script:wght@500&family=Playfair+Display:ital@0;1&family=Satisfy&display=swap'
-					rel='stylesheet'></link>
+					href='https://fonts.googleapis.com/css2?family=Alatsi&display=swap'
+					rel='stylesheet'
+				/>
 			</Head>
-			<FadeWrapper>
-				<Navbar />
-			</FadeWrapper>
 			<Component {...pageProps} />
 		</>
 	);

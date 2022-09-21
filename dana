@@ -55,8 +55,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
 	const placesResponse: placeResponse_schema = await request(url, query);
 
-	const placesOutput: placesOutput_schema =
-		placesResponse.placesSConnection.edges;
+	const placesOutput = placesResponse.placesSConnection.edges;
 
 	const query2 = gql`
 		query PlaceQuery {
