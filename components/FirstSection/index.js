@@ -7,7 +7,7 @@ import AirIcon from '@mui/icons-material/Air';
 
 const FirstSection = () => {
 	return (
-		<>
+		<section>
 			<Stack
 				direction='row'
 				sx={{
@@ -69,9 +69,11 @@ const FirstSection = () => {
 								lineHeight: 2.5,
 								color: 'rgb(107, 107, 107)',
 								fontStyle: 'italic',
-								letterSpacing: 1.5
+								letterSpacing: 1.5,
+								fontFamily: 'Alatsi'
 							}}>
-							fasdfdvdfshnbfgnfbgtvservfdtgvsdfgdtvgdf
+							Curabitur in risus sapien. Donec ex dolor, suscipit ut nisi a,
+							tincidunt laoreet nulla.
 						</Typography>
 					</Box>
 					<Box
@@ -151,7 +153,7 @@ const FirstSection = () => {
 					</Stack>
 				</Stack>
 			</Stack>
-		</>
+		</section>
 	);
 };
 

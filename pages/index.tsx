@@ -4,9 +4,9 @@ import MainContent from '../components/MainContent';
 import React from 'react';
 import MainLayout from '../components/MainLayout';
 
-const Home = ({ mainPlacesOutput }) => {
+const Home: React.FC = () => {
 	return (
-		<MainLayout mainPlacesOutput={mainPlacesOutput}>
+		<MainLayout>
 			<MainContent />
 		</MainLayout>
 	);

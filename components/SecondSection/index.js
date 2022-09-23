@@ -1,11 +1,11 @@
 /** @format */
 
-import { Stack, Typography, Box } from '@mui/material';
+import { Stack, Typography, Box, Button } from '@mui/material';
 import Image from 'next/image';
 
 const SecondSection = () => {
 	return (
-		<>
+		<section>
 			<Stack columnGap={10} direction='row' sx={{ height: 800 }}>
 				<Stack
 					justifyContent='space-around'
@@ -25,7 +25,7 @@ const SecondSection = () => {
 								top: -30,
 								left: -30,
 								background:
-									'linear-gradient(to left, rgb(146, 200, 247),rgba(207, 231, 252,0.4))',
+									'linear-gradient(to left, rgb(215, 230, 239,0.5),rgba(237, 244, 248))',
 								width: '100%',
 								height: '100%'
 							}}
@@ -38,7 +38,8 @@ const SecondSection = () => {
 								color: 'rgb(107, 107, 107)',
 								lineHeight: 2,
 								textAlign: 'justify',
-								letterSpacing: 1.5
+								letterSpacing: 1.5,
+								fontFamily: 'Alatsi'
 							}}>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
 							tempus, diam vitae laoreet tempor, libero risus posuere lorem, a
@@ -64,7 +65,7 @@ const SecondSection = () => {
 								bottom: -30,
 								right: -30,
 								background:
-									'linear-gradient(to left, rgb(146, 200, 247),rgba(207, 231, 252,0.4))',
+									'linear-gradient(to left, rgb(215, 230, 239,0.5),rgba(237, 244, 248))',
 								width: '100%',
 								height: '100%'
 							}}
@@ -86,17 +87,19 @@ const SecondSection = () => {
 								color: 'rgb(107, 107, 107)',
 								lineHeight: 2,
 								textAlign: 'justify',
-								letterSpacing: 1.5
+								letterSpacing: 1.5,
+								fontFamily: 'Alatsi'
 							}}>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
 							tempus, diam vitae laoreet tempor, libero risus posuere lorem, a
 							commodo enim lorem nec lacus. Nullam orci mi, posuere non cursus
 							et, ullamcorper molestie tortor.
 						</Typography>
+						<Button variant='contained'>Click for more</Button>
 					</Stack>
 				</Stack>
 			</Stack>
-		</>
+		</section>
 	);
 };
 
