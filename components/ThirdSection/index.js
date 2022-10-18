@@ -22,7 +22,7 @@ const places = [
 			'Curabitur in risus sapien. Donec ex dolor, suscipit ut nisi a, tincidunt laoreet nulla.'
 	},
 	{
-		img: '/public/Uunartoq.jpg',
+		img: '/Uunartoq.jpg',
 		title: 'Uunartoq',
 		authorImg: '/face3.png',
 		author: 'Mary',

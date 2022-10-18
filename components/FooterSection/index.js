@@ -8,7 +8,7 @@ const FooterSection = () => {
 				sx={{
 					background:
 						'linear-gradient(to left, rgb(215, 230, 239,0.5),rgba(237, 244, 248))',
-					height: 500,
+					height: 200,
 					width: '100%'
 				}}>
 				<Stack
