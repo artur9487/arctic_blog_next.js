@@ -16,7 +16,7 @@ const places = [
 	{
 		img: '/nuuk.jpg',
 		title: 'Nuuk',
-		authorImg: '/../public/face2.png',
+		authorImg: '/face2.png',
 		author: 'Frank',
 		review:
 			'Curabitur in risus sapien. Donec ex dolor, suscipit ut nisi a, tincidunt laoreet nulla.'

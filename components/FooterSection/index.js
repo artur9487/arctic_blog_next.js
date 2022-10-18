@@ -14,14 +14,13 @@ const FooterSection = () => {
 				<Stack
 					direction='row'
 					justifyContent='space-between'
-					alignItems='center'
-					sx={{ border: 1 }}>
+					alignItems='center'>
 					<Stack
 						justifyContent='center'
 						alignItems='center'
 						sx={{
 							width: 300,
-							height: 200,
+							height: 100,
 							bgcolor: 'rgba(215, 230, 239, 1)'
 						}}>
 						<Typography
