@@ -6,15 +6,15 @@ import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArro
 
 const places = [
 	{
-		img: '/../public/ilulissat.jpg',
+		img: '/ilulissat.jpg',
 		title: 'Ilulissat',
-		authorImg: '/../public/face1.png',
+		authorImg: '/face1.png',
 		author: 'Antony',
 		review:
 			'Curabitur in risus sapien. Donec ex dolor, suscipit ut nisi a, tincidunt laoreet nulla. '
 	},
 	{
-		img: '/../public/nuuk.jpg',
+		img: '/nuuk.jpg',
 		title: 'Nuuk',
 		authorImg: '/../public/face2.png',
 		author: 'Frank',
@@ -22,9 +22,9 @@ const places = [
 			'Curabitur in risus sapien. Donec ex dolor, suscipit ut nisi a, tincidunt laoreet nulla.'
 	},
 	{
-		img: '/../public/Uunartoq.jpg',
+		img: '/public/Uunartoq.jpg',
 		title: 'Uunartoq',
-		authorImg: '/../public/face3.png',
+		authorImg: '/face3.png',
 		author: 'Mary',
 		review:
 			'Curabitur in risus sapien. Donec ex dolor, suscipit ut nisi a, tincidunt laoreet nulla.'

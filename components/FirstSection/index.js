@@ -17,7 +17,7 @@ const FirstSection = () => {
 					position: 'relative'
 				}}>
 				<Image
-					src={'/../public/green.jpg'}
+					src={'/green.jpg'}
 					objectFit='cover'
 					layout='fill'
 					alt='main photo'

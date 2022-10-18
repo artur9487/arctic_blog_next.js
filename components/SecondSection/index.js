@@ -13,7 +13,7 @@ const SecondSection = () => {
 					sx={{ position: 'relative', width: '60%' }}>
 					<Box sx={{ height: 500, width: '100%', position: 'relative' }}>
 						<Image
-							src={'/../public/gren3.jpg'}
+							src={'/gren3.jpg'}
 							objectFit='cover'
 							layout='fill'
 							alt='main photo'
@@ -53,7 +53,7 @@ const SecondSection = () => {
 					sx={{ position: 'relative', width: '40%' }}>
 					<Box sx={{ height: 200, width: '100%', position: 'relative' }}>
 						<Image
-							src={'/../public/gren2.jpg'}
+							src={'/gren2.jpg'}
 							objectFit='cover'
 							layout='fill'
 							alt='main photo'
