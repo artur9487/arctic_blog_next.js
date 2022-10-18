@@ -72,10 +72,15 @@ const ThirdSection = () => {
 				rowGap={14}
 				container
 				sx={{ height: 1000 }}>
-				{places.map((item) => {
+				{places.map((item, indx) => {
 					const { img, authorImg, author, review, title } = item;
 					return (
-						<Grid sx={{ position: 'relative' }} container item xs={4}>
+						<Grid
+							key={indx}
+							sx={{ position: 'relative' }}
+							container
+							item
+							xs={4}>
 							<Image
 								src={img}
 								objectFit='cover'
