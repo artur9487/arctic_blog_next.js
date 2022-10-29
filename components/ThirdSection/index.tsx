@@ -4,7 +4,15 @@ import { Grid, Typography, Box, Stack } from '@mui/material';
 import Image from 'next/image';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 
-const places = [
+interface placesSchema {
+	img: string;
+	title: string;
+	authorImg: string;
+	author: string;
+	review: string;
+}
+
+const places: placesSchema[] = [
 	{
 		img: '/ilulissat.jpg',
 		title: 'Ilulissat',
@@ -31,7 +39,7 @@ const places = [
 	}
 ];
 
-const ThirdSection = () => {
+const ThirdSection: React.FC = () => {
 	return (
 		<section>
 			<Stack direction='column' spacing={0} sx={{ mb: 10 }}>

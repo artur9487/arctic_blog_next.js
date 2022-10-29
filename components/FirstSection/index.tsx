@@ -5,7 +5,7 @@ import CloudQueueIcon from '@mui/icons-material/CloudQueue';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import AirIcon from '@mui/icons-material/Air';
 
-const FirstSection = () => {
+const FirstSection: React.FC = () => {
 	return (
 		<section>
 			<Stack

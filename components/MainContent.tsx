@@ -7,7 +7,7 @@ import ThirdSection from './ThirdSection';
 import FooterSection from './FooterSection';
 import { Container } from '@mui/material';
 
-const MainContent = () => {
+const MainContent: React.FC = () => {
 	return (
 		<>
 			<article>

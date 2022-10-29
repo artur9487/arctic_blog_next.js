@@ -2,8 +2,9 @@
 
 import { Stack, Typography, Box, Button } from '@mui/material';
 import Image from 'next/image';
+import React from 'react';
 
-const SecondSection = () => {
+const SecondSection: React.FC = () => {
 	return (
 		<section>
 			<Stack columnGap={10} direction='row' sx={{ height: 800 }}>

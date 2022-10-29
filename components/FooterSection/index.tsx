@@ -1,7 +1,8 @@
 /** @format */
 import { Box, Stack, Typography, Button } from '@mui/material';
+import React from 'react';
 
-const FooterSection = () => {
+const FooterSection: React.FC = () => {
 	return (
 		<>
 			<Box

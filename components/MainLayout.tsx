@@ -5,18 +5,22 @@ import { Box } from '@mui/system';
 import { Context } from '../ContextComp';
 import { useMediaQuery } from '@mui/material';
 
-const MainLayout = (props) => {
-	const maxWidth900 = useMediaQuery('(max-width:900px)');
-	const maxWidth600 = useMediaQuery('(max-width:600px)');
+interface mainLayoutSchema {
+	children: JSX.Element;
+}
+
+const MainLayout: React.FC<mainLayoutSchema> = ({ children }) => {
+	const maxWidth900 = useMediaQuery<string>('(max-width:900px)');
+	const maxWidth600 = useMediaQuery<string>('(max-width:600px)');
 
 	return (
-		<Context.Provider
+		/*<Context.Provider
 			value={{
 				maxWidth900,
 				maxWidth600
-			}}>
-			<Box sx={{ position: 'relative' }}>{props.children}</Box>
-		</Context.Provider>
+			}}>*/
+		<Box sx={{ position: 'relative' }}>{children}</Box>
+		/*</Context.Provider>*/
 	);
 };
 
