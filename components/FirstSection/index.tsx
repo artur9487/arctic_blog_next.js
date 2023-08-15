@@ -14,7 +14,7 @@ const FirstSection: React.FC = () => {
 					width: '100%',
 					height: 600,
 					margin: 'auto',
-					position: 'relative'
+					position: 'relative',
 				}}>
 				<Image
 					src={'/green.jpg'}
@@ -28,14 +28,14 @@ const FirstSection: React.FC = () => {
 						width: '50%',
 						height: '100%',
 						overflow: 'hidden',
-						position: 'relative'
+						position: 'relative',
 					}}>
 					<Box
 						sx={{
 							position: 'absolute',
 							top: '40%',
 							right: 0,
-							transform: 'translateY(-50%)'
+							transform: 'translateY(-50%)',
 						}}>
 						<Typography
 							sx={{
@@ -45,7 +45,7 @@ const FirstSection: React.FC = () => {
 								letterSpacing: 10,
 								fontWeight: 1000,
 								fontFamily: 'Alatsi',
-								textShadow: '2px 2px rgb(215, 230, 239)'
+								textShadow: '2px 2px rgb(215, 230, 239)',
 							}}>
 							GREEN
 						</Typography>
@@ -59,7 +59,7 @@ const FirstSection: React.FC = () => {
 						height: '100%',
 						bgcolor: 'rgba(255,255,255,0.85)',
 						mb: 40,
-						position: 'relative'
+						position: 'relative',
 					}}>
 					<Box sx={{ flex: 3 }} />
 					<Box sx={{ flex: 2, p: 10 }}>
@@ -70,30 +70,38 @@ const FirstSection: React.FC = () => {
 								color: 'rgb(107, 107, 107)',
 								fontStyle: 'italic',
 								letterSpacing: 1.5,
-								fontFamily: 'Alatsi'
+								fontFamily: 'Alatsi',
 							}}>
-							Curabitur in risus sapien. Donec ex dolor, suscipit ut nisi a,
-							tincidunt laoreet nulla.
+							Curabitur in risus sapien. Donec ex dolor, suscipit ut
+							nisi a, tincidunt laoreet nulla.
 						</Typography>
 					</Box>
+					<div className='absolute left-0 top-[40%] translate-[-50%]'>
+						<div className='text-md text-black z-999 font-bold tracking-normal Alatsi'>
+							Land
+						</div>
+					</div>
 					<Box
 						sx={{
 							position: 'absolute',
 							top: '40%',
 							left: 0,
-							transform: 'translateY(-50%)'
+							transform: 'translateY(-50%)',
 						}}>
-						<Typography
+						<p className='text-red-50 text-white z-999 font-bold tracking-normal Alatsi'>
+							Lande
+						</p>
+						{/*<Typography
 							sx={{
 								fontSize: 130,
 								color: 'black',
 								zIndex: 999,
 								fontWeight: 1000,
 								letterSpacing: 10,
-								fontFamily: 'Alatsi'
+								fontFamily: 'Alatsi',
 							}}>
 							LAND
-						</Typography>
+						</Typography>*/}
 					</Box>
 				</Stack>
 				<Stack
@@ -108,7 +116,7 @@ const FirstSection: React.FC = () => {
 						boxShadow: '-12px 16px 14px -4px rgba(215, 230, 239, 1)',
 						position: 'absolute',
 						bottom: -70,
-						left: -70
+						left: -70,
 					}}>
 					<Stack
 						alignItems='center'
@@ -122,7 +130,9 @@ const FirstSection: React.FC = () => {
 							<Typography sx={{ fontWeight: 600, fontSize: 15 }}>
 								22 / 10 / 2022
 							</Typography>
-							<Typography sx={{ color: 'gray', fontSize: 13 }}>15C</Typography>
+							<Typography sx={{ color: 'gray', fontSize: 13 }}>
+								15C
+							</Typography>
 						</Stack>
 					</Stack>
 					<Stack
@@ -130,12 +140,16 @@ const FirstSection: React.FC = () => {
 						spacing={1}
 						sx={{ margin: 'auto', width: '70%' }}
 						direction='row'>
-						<AcUnitIcon sx={{ fontSize: 50, color: 'rgb(137, 241, 245)' }} />
+						<AcUnitIcon
+							sx={{ fontSize: 50, color: 'rgb(137, 241, 245)' }}
+						/>
 						<Stack direction='column'>
 							<Typography sx={{ fontWeight: 600, fontSize: 15 }}>
 								Snowy
 							</Typography>
-							<Typography sx={{ color: 'gray', fontSize: 13 }}>50%</Typography>
+							<Typography sx={{ color: 'gray', fontSize: 13 }}>
+								50%
+							</Typography>
 						</Stack>
 					</Stack>
 					<Stack
@@ -143,12 +157,16 @@ const FirstSection: React.FC = () => {
 						spacing={1}
 						sx={{ margin: 'auto', width: '70%' }}
 						direction='row'>
-						<AirIcon sx={{ fontSize: 50, color: 'rgb(104, 98, 252)' }} />
+						<AirIcon
+							sx={{ fontSize: 50, color: 'rgb(104, 98, 252)' }}
+						/>
 						<Stack direction='column'>
 							<Typography sx={{ fontWeight: 600, fontSize: 15 }}>
 								MPH West
 							</Typography>
-							<Typography sx={{ color: 'gray', fontSize: 13 }}>15C</Typography>
+							<Typography sx={{ color: 'gray', fontSize: 13 }}>
+								15C
+							</Typography>
 						</Stack>
 					</Stack>
 				</Stack>
