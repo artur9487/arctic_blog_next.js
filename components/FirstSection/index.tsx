@@ -76,33 +76,11 @@ const FirstSection: React.FC = () => {
 							nisi a, tincidunt laoreet nulla.
 						</Typography>
 					</Box>
-					<div className='absolute left-0 top-[40%] translate-[-50%]'>
-						<div className='text-md text-black z-999 font-bold tracking-normal Alatsi'>
-							Land
+					<div className='absolute left-0 top-1/3'>
+						<div className='text-md text-9xl text-black z-999 font-alatsi font-bold tracking-normal Alatsi'>
+							LAND
 						</div>
 					</div>
-					<Box
-						sx={{
-							position: 'absolute',
-							top: '40%',
-							left: 0,
-							transform: 'translateY(-50%)',
-						}}>
-						<p className='text-red-50 text-white z-999 font-bold tracking-normal Alatsi'>
-							Lande
-						</p>
-						{/*<Typography
-							sx={{
-								fontSize: 130,
-								color: 'black',
-								zIndex: 999,
-								fontWeight: 1000,
-								letterSpacing: 10,
-								fontFamily: 'Alatsi',
-							}}>
-							LAND
-						</Typography>*/}
-					</Box>
 				</Stack>
 				<Stack
 					justifyContent='center'

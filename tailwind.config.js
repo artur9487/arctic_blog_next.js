@@ -13,7 +13,11 @@ module.exports = {
 		'./src/**/*.{js,ts,jsx,tsx,mdx}',
 	],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				alatsi: ['Alatsi', 'sans-serif'],
+			},
+		},
 	},
 	plugins: [],
 };
