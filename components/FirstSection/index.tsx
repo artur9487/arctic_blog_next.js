@@ -61,8 +61,14 @@ const FirstSection: React.FC = () => {
 						mb: 40,
 						position: 'relative',
 					}}>
-					<Box sx={{ flex: 3 }} />
-					<Box sx={{ flex: 2, p: 10 }}>
+					<div className='flex-3'></div>
+					<div className='border-4 border-indigo-600 p-10 flex-1'>
+						<span className='font-normal leading-8 text-black italic tracking-normal font-alatsi'>
+							Curabitur in risus sapien. Donec ex dolor, suscipit ut
+							nisi a, tincidunt laoreet nulla.
+						</span>
+					</div>
+					{/*	<Box sx={{ flex: 1, p: 10, border: 1 }}>
 						<Typography
 							sx={{
 								fontWeight: 500,
@@ -75,7 +81,7 @@ const FirstSection: React.FC = () => {
 							Curabitur in risus sapien. Donec ex dolor, suscipit ut
 							nisi a, tincidunt laoreet nulla.
 						</Typography>
-					</Box>
+						</Box>*/}
 					<div className='absolute left-0 top-1/3'>
 						<div className='text-md text-9xl text-black z-999 font-alatsi font-bold tracking-normal Alatsi'>
 							LAND
