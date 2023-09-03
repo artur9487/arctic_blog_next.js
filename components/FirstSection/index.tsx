@@ -38,7 +38,7 @@ const FirstSection: React.FC = () => {
 					</div>
 				</div>
 
-				<Stack
+				{/*	<Stack
 					justifyContent='center'
 					alignItems='center'
 					direction='column'
@@ -51,59 +51,49 @@ const FirstSection: React.FC = () => {
 						position: 'absolute',
 						bottom: -100,
 						left: -100,
-					}}>
-					<Stack
-						alignItems='center'
-						spacing={1}
-						sx={{ margin: 'auto', width: '70%' }}
-						direction='row'>
+					}}>*/}
+				<div className='rounded-xl justify-center items-center flex flex-col bg-white w-60 h-50 absolute -left-28 -bottom-28'>
+					<div className='flex gap-4 flex-row items-center w-3/4 border-2 border-black'>
 						<CloudQueueIcon
 							sx={{ fontSize: 50, color: 'rgb(147, 204, 245)' }}
 						/>
-						<Stack direction='column'>
-							<Typography sx={{ fontWeight: 600, fontSize: 15 }}>
+						<div className='flex flex-col'>
+							<span className='font-gray-400 text-xl font-alatsi font-thin'>
 								22 / 10 / 2022
-							</Typography>
-							<Typography sx={{ color: 'gray', fontSize: 13 }}>
+							</span>
+							<span className='font-gray-400 font-alatsi font-thin'>
 								15C
-							</Typography>
-						</Stack>
-					</Stack>
-					<Stack
-						alignItems='center'
-						spacing={1}
-						sx={{ margin: 'auto', width: '70%' }}
-						direction='row'>
+							</span>
+						</div>
+					</div>
+
+					<div className='flex gap-4 flex-row items-center w-3/4'>
 						<AcUnitIcon
 							sx={{ fontSize: 50, color: 'rgb(137, 241, 245)' }}
 						/>
-						<Stack direction='column'>
+						<div className='flex flex-col'>
 							<span className='font-gray-400 text-xl font-alatsi font-thin'>
 								Snowy
 							</span>
 							<span className='font-gray-400 font-alatsi font-thin'>
 								50%
 							</span>
-						</Stack>
-					</Stack>
-					<Stack
-						alignItems='center'
-						spacing={1}
-						sx={{ margin: 'auto', width: '70%' }}
-						direction='row'>
+						</div>
+					</div>
+					<div className='flex gap-4 flex-row items-center w-3/4'>
 						<AirIcon
 							sx={{ fontSize: 50, color: 'rgb(104, 98, 252)' }}
 						/>
-						<Stack direction='column'>
-							<Typography sx={{ fontWeight: 600, fontSize: 15 }}>
+						<div className='flex flex-col'>
+							<span className='font-gray-400 text-xl font-alatsi font-thin'>
 								MPH West
-							</Typography>
-							<Typography sx={{ color: 'gray', fontSize: 13 }}>
+							</span>
+							<span className='font-gray-400 font-alatsi font-thin'>
 								15C
-							</Typography>
-						</Stack>
-					</Stack>
-				</Stack>
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 	);
