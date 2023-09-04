@@ -1,5 +1,4 @@
 /** @format */
-import { Box, Stack, Typography } from '@mui/material';
 import Image from 'next/image';
 import CloudQueueIcon from '@mui/icons-material/CloudQueue';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
@@ -37,23 +36,8 @@ const FirstSection: React.FC = () => {
 						</div>
 					</div>
 				</div>
-
-				{/*	<Stack
-					justifyContent='center'
-					alignItems='center'
-					direction='column'
-					sx={{
-						borderRadius: 10,
-						bgcolor: 'rgb(255,255,255)',
-						width: 250,
-						height: 300,
-						boxShadow: '-12px 16px 14px -4px rgba(215, 230, 239, 1)',
-						position: 'absolute',
-						bottom: -100,
-						left: -100,
-					}}>*/}
-				<div className='rounded-xl justify-center items-center flex flex-col bg-white w-60 h-50 absolute -left-28 -bottom-28'>
-					<div className='flex gap-4 flex-row items-center w-3/4 border-2 border-black'>
+				<div className='py-12 px-8 gap-3 drop-shadow-lg rounded-xl justify-start items-start flex flex-col bg-white absolute -left-28 -bottom-28'>
+					<div className='flex gap-4 flex-row items-center '>
 						<CloudQueueIcon
 							sx={{ fontSize: 50, color: 'rgb(147, 204, 245)' }}
 						/>
@@ -67,7 +51,7 @@ const FirstSection: React.FC = () => {
 						</div>
 					</div>
 
-					<div className='flex gap-4 flex-row items-center w-3/4'>
+					<div className='flex gap-4 flex-row items-center '>
 						<AcUnitIcon
 							sx={{ fontSize: 50, color: 'rgb(137, 241, 245)' }}
 						/>
@@ -80,7 +64,7 @@ const FirstSection: React.FC = () => {
 							</span>
 						</div>
 					</div>
-					<div className='flex gap-4 flex-row items-center w-3/4'>
+					<div className='flex gap-4 flex-row items-center '>
 						<AirIcon
 							sx={{ fontSize: 50, color: 'rgb(104, 98, 252)' }}
 						/>
