@@ -40,31 +40,15 @@ const SecondSection: React.FC = () => {
 							layout='fill'
 							alt='main photo'
 						/>
-						<Box
-							sx={{
-								zIndex: -1,
-								position: 'absolute',
-								bottom: -30,
-								right: -30,
-								background:
-									'linear-gradient(to left, rgb(215, 230, 239,0.5),rgba(237, 244, 248))',
-								width: '100%',
-								height: '100%',
-							}}
-						/>
+						<div className='absolute -z-10 -bottom-8 -right-8 w-full h-full bg-gradient-to-r from-slate-200/[.5] to-slate-200/[.9]'></div>
 					</Box>
 
 					<div className='w-2/3 mr-auto '>
-						<div className='w-full mr-auto  text-justify'>
-							<Typography
-								sx={{
-									fontSize: 30,
-									fontWeight: 600,
-									fontFamily: 'Alatsi',
-								}}>
+						<div className='w-full mr-auto text-justify'>
+							<div className='text-2xl font-semibold'>
 								Explore new world
-							</Typography>
-							<span className='text-md items-center font-alatsi tracking-wide leading-7 text-gray-500'>
+							</div>
+							<span className='text-md items-center tracking-wide leading-7 text-gray-500'>
 								Lorem ipsum dolor sit amet, consectetur adipiscing
 								elit. Ut tempus, diam vitae laoreet tempor, libero
 								risus posuere lorem, a commodo enim lorem nec lacus.
