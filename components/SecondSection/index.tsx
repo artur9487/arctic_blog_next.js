@@ -7,8 +7,8 @@ import React from 'react';
 const SecondSection: React.FC = () => {
 	return (
 		<section>
-			<Stack columnGap={10} direction='row' sx={{ height: 800 }}>
-				<div className='justify-around flex flex-col relative w-2/3 '>
+			<div className=' flex flex-row gap-32'>
+				<div className='justify-around flex flex-col relative w-2/3  gap-4'>
 					<div className='h-96 w-full relative'>
 						<Image
 							src={'/gren3.jpg'}
@@ -20,7 +20,7 @@ const SecondSection: React.FC = () => {
 					</div>
 					<div></div>
 					<div className='w-2/3 ml-auto text-justify  '>
-						<span className='text-md items-center font-alatsi tracking-wide leading-7 text-gray-500'>
+						<span className='text-lg items-center font-alatsi tracking-wide leading-7 text-gray-500'>
 							Corem ipsum dolor sit amet, consectetur adipiscing elit.
 							Ut tempus, diam vitae laoreet tempor, libero risus
 							posere lorem, a commodo enim lorem nec lacus.
@@ -33,7 +33,11 @@ const SecondSection: React.FC = () => {
 					direction={'column-reverse'}
 					sx={{ position: 'relative', width: '40%' }}>
 					<Box
-						sx={{ height: 200, width: '100%', position: 'relative' }}>
+						sx={{
+							height: 200,
+							width: '100%',
+							position: 'relative',
+						}}>
 						<Image
 							src={'/gren2.jpg'}
 							objectFit='cover'
@@ -48,7 +52,7 @@ const SecondSection: React.FC = () => {
 							<div className='text-2xl font-semibold'>
 								Explore new world
 							</div>
-							<span className='text-md items-center tracking-wide leading-7 text-gray-500'>
+							<span className='text-lg items-center tracking-wide leading-7 text-gray-500'>
 								Lorem ipsum dolor sit amet, consectetur adipiscing
 								elit. Ut tempus, diam vitae laoreet tempor, libero
 								risus posuere lorem, a commodo enim lorem nec lacus.
@@ -60,7 +64,7 @@ const SecondSection: React.FC = () => {
 						<Button variant='contained'>Click for more</Button>
 					</div>
 				</Stack>
-			</Stack>
+			</div>
 		</section>
 	);
 };

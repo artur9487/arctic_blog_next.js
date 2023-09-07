@@ -19,7 +19,7 @@ const places: placesSchema[] = [
 		authorImg: '/face1.png',
 		author: 'Antony',
 		review:
-			'Curabitur in risus sapien. Donec ex dolor, suscipit ut nisi a, tincidunt laoreet nulla. '
+			'Curabitur in risus sapien. Donec ex dolor, suscipit ut nisi a, tincidunt laoreet nulla. ',
 	},
 	{
 		img: '/nuuk.jpg',
@@ -27,7 +27,7 @@ const places: placesSchema[] = [
 		authorImg: '/face2.png',
 		author: 'Frank',
 		review:
-			'Curabitur in risus sapien. Donec ex dolor, suscipit ut nisi a, tincidunt laoreet nulla.'
+			'Curabitur in risus sapien. Donec ex dolor, suscipit ut nisi a, tincidunt laoreet nulla.',
 	},
 	{
 		img: '/Uunartoq.jpg',
@@ -35,45 +35,26 @@ const places: placesSchema[] = [
 		authorImg: '/face3.png',
 		author: 'Mary',
 		review:
-			'Curabitur in risus sapien. Donec ex dolor, suscipit ut nisi a, tincidunt laoreet nulla.'
-	}
+			'Curabitur in risus sapien. Donec ex dolor, suscipit ut nisi a, tincidunt laoreet nulla.',
+	},
 ];
 
 const ThirdSection: React.FC = () => {
 	return (
 		<section>
-			<Stack direction='column' spacing={0} sx={{ mb: 10 }}>
-				<Typography
-					sx={{
-						fontFamily: 'Alatsi',
-						fontSize: 42,
-						fontWeight: 1000
-					}}>
+			<div className='flex flex-col mb-12'>
+				<span className='text-5xl font-semibold'>
 					Read the most popular reviews
-				</Typography>
-				<Typography
-					sx={{
-						fontFamily: 'Alatsi',
-						fontSize: 42,
-						fontWeight: 1000
-					}}>
+				</span>
+				<span className='text-5xl font-semibold'>
 					from world travel experts
-				</Typography>
-				<Typography
-					sx={{
-						color: 'gray',
-						width: '40%',
-						textAlign: 'justify',
-						mt: 3,
-						fontFamily: 'Alatsi',
-						letterSpacing: 2
-					}}>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus,
-					diam vitae laoreet tempor, libero risus posuere lorem, a commodo enim
-					lorem nec lacus.
-				</Typography>
-			</Stack>
-
+				</span>
+				<span className='text-gray-500 w-1/3 text-justify mt-12 tracking-widest leading-7 '>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+					tempus, diam vitae laoreet tempor, libero risus posuere
+					lorem, a commodo enim lorem nec lacus.
+				</span>
+			</div>
 			<Grid
 				justifyContent='space-around'
 				columnGap={1}
@@ -104,57 +85,49 @@ const ThirdSection: React.FC = () => {
 									bottom: -70,
 									right: -70,
 									bgcolor: 'white',
-									boxShadow: '12px 16px 14px -4px rgba(215, 230, 239, 1)',
+									boxShadow:
+										'12px 16px 14px -4px rgba(215, 230, 239, 1)',
 									p: 3,
-									width: '100%'
+									width: '100%',
 								}}>
 								<Typography
 									sx={{
 										textAlign: 'center',
 										fontFamily: 'Alatsi',
 										fontSize: 22,
-										fontWeight: 800
+										fontWeight: 800,
 									}}>
 									{title}
 								</Typography>
 								<Stack direction='row' spacing={2}>
-									<Stack
-										direction='column'
-										justifyContent='center'
-										alignItems='center'>
-										<Typography
-											sx={{
-												fontWeight: 600,
-												fontStyle: 'italic',
-												fontFamily: 'Alatsi'
-											}}>
+									<div className='flex flex-col justify-center items-center'>
+										<span className='font-semibold italic'>
 											{author}
-										</Typography>
-										<Box sx={{ position: 'relative', width: 50, height: 50 }}>
+										</span>
+										<div className='relative h-16 w-16'>
 											<Image
 												src={authorImg}
 												objectFit='cover'
 												layout='fill'
 												alt='author photo'
 											/>
-										</Box>
-									</Stack>
-									<Typography
-										sx={{ textAlign: 'justify', fontFamily: 'Alatsi' }}>
-										{review}
-									</Typography>
+										</div>
+									</div>
 								</Stack>
-								<Stack justifyContent='flex-end' direction='row'>
-									<Typography
-										sx={{
-											color: 'gray',
-											textAlign: 'right',
-											cursor: 'pointer'
-										}}>
-										See more
-									</Typography>
-									<KeyboardDoubleArrowRightIcon sx={{ color: 'blue' }} />
-								</Stack>
+								<span className='text-justify'>{review}</span>
+							</Stack>
+							<Stack justifyContent='flex-end' direction='row'>
+								<Typography
+									sx={{
+										color: 'gray',
+										textAlign: 'right',
+										cursor: 'pointer',
+									}}>
+									See more
+								</Typography>
+								<KeyboardDoubleArrowRightIcon
+									sx={{ color: 'blue' }}
+								/>
 							</Stack>
 						</Grid>
 					);
