@@ -90,15 +90,11 @@ const ThirdSection: React.FC = () => {
 									p: 3,
 									width: '100%',
 								}}>
-								<Typography
-									sx={{
-										textAlign: 'center',
-										fontFamily: 'Alatsi',
-										fontSize: 22,
-										fontWeight: 800,
-									}}>
-									{title}
-								</Typography>
+								<div className=''>
+									<span className='text-center text-2xl font-semibold'>
+										{title}
+									</span>
+								</div>
 								<Stack direction='row' spacing={2}>
 									<div className='flex flex-col justify-center items-center'>
 										<span className='font-semibold italic'>
