@@ -55,47 +55,25 @@ const ThirdSection: React.FC = () => {
 					lorem, a commodo enim lorem nec lacus.
 				</span>
 			</div>
-			<Grid
-				justifyContent='space-around'
-				columnGap={1}
-				rowGap={14}
-				container
-				sx={{ height: 1000 }}>
+			<div className='border-4 border-black  grid grid-flow-row-dense grid-cols-2 justify-center  h-[1000px] border-2 w-full  '>
 				{places.map((item, indx) => {
 					const { img, authorImg, author, review, title } = item;
 					return (
-						<Grid
+						<div
 							key={indx}
-							sx={{ position: 'relative' }}
-							container
-							item
-							xs={4}>
+							className='relative border-4 border-black w-2/3 h-full '>
 							<Image
 								src={img}
 								objectFit='cover'
 								layout='fill'
 								alt='main photo'
 							/>
-							<Stack
-								direction='column'
-								spacing={1}
-								sx={{
-									borderRadius: 5,
-									position: 'absolute',
-									bottom: -70,
-									right: -70,
-									bgcolor: 'white',
-									boxShadow:
-										'12px 16px 14px -4px rgba(215, 230, 239, 1)',
-									p: 3,
-									width: '100%',
-								}}>
-								<div className=''>
-									<span className='text-center text-2xl font-semibold'>
-										{title}
-									</span>
-								</div>
-								<Stack direction='row' spacing={2}>
+							<div className='flex flex-col gap-2 rounded-xl absolute -bottom-16 -right-16 bg-white shadow-lg shadow-slate-200 w-full p-4'>
+								<span className='text-center text-2xl font-semibold'>
+									{title}
+								</span>
+
+								<div className='flex flex-row gap-2'>
 									<div className='flex flex-col justify-center items-center'>
 										<span className='font-semibold italic'>
 											{author}
@@ -109,26 +87,22 @@ const ThirdSection: React.FC = () => {
 											/>
 										</div>
 									</div>
-								</Stack>
-								<span className='text-justify'>{review}</span>
-							</Stack>
-							<Stack justifyContent='flex-end' direction='row'>
-								<Typography
-									sx={{
-										color: 'gray',
-										textAlign: 'right',
-										cursor: 'pointer',
-									}}>
+									<span className='text-justify'>{review}</span>
+								</div>
+							</div>
+
+							{/*<div className='flex justify-end flex-row '>
+								<span className='text-gray-500 text-right cursor-pointer'>
 									See more
-								</Typography>
+								</span>
 								<KeyboardDoubleArrowRightIcon
 									sx={{ color: 'blue' }}
 								/>
-							</Stack>
-						</Grid>
+							</div>*/}
+						</div>
 					);
 				})}
-			</Grid>
+			</div>
 		</section>
 	);
 };
