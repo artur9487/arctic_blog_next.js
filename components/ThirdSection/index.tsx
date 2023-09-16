@@ -1,8 +1,6 @@
 /** @format */
 
-import { Grid, Typography, Box, Stack } from '@mui/material';
 import Image from 'next/image';
-import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 
 interface placesSchema {
 	img: string;
@@ -55,13 +53,13 @@ const ThirdSection: React.FC = () => {
 					lorem, a commodo enim lorem nec lacus.
 				</span>
 			</div>
-			<div className=' border-4 border-black justify-items-center justify-self-center  grid self-center  grid-flow-row-dense grid-cols-2 gap-24 justify-center h-[1000px] border-2 w-full mx-auto '>
+			<div className=' flex-wrap flex gap-24 justify-center h-[1000px] w-full '>
 				{places.map((item, indx) => {
 					const { img, authorImg, author, review, title } = item;
 					return (
 						<div
 							key={indx}
-							className='[&>*:nth-child(3)] relative border-4 border-black w-2/3 h-full self-center '>
+							className='relative w-1/3 h-2/5 self-center '>
 							<Image
 								src={img}
 								objectFit='cover'
@@ -90,7 +88,6 @@ const ThirdSection: React.FC = () => {
 									<span className='text-justify'>{review}</span>
 								</div>
 							</div>
-
 							{/*<div className='flex justify-end flex-row '>
 								<span className='text-gray-500 text-right cursor-pointer'>
 									See more

@@ -1,49 +1,30 @@
 /** @format */
-import { Box, Stack, Typography, Button } from '@mui/material';
 import React from 'react';
 
 const FooterSection: React.FC = () => {
 	return (
 		<>
-			<Box
-				sx={{
-					background:
-						'linear-gradient(to left, rgb(215, 230, 239,0.5),rgba(237, 244, 248))',
-					height: 200,
-					width: '100%'
-				}}>
-				<Stack
-					direction='row'
-					justifyContent='space-between'
-					alignItems='center'>
-					<Stack
-						justifyContent='center'
-						alignItems='center'
-						sx={{
-							width: 300,
-							height: 100,
-							bgcolor: 'rgba(215, 230, 239, 1)'
-						}}>
-						<Typography
-							variant='h4'
-							sx={{ fontFamily: 'Alatsi', letterSpacing: 2 }}>
+			<div className='w-full h-[200px] bg-slate-100'>
+				<div className='flex flex-row justify-between items-center'>
+					<div className='w-40 h-28 flex justify-center items-center bg-slate-200'>
+						<span className='tracking-widest text-2xl'>
 							Subscribe
-						</Typography>
-					</Stack>
+						</span>
+					</div>
 					<input
 						style={{
 							height: 30,
 							padding: 25,
 							fontFamily: 'Alatsi',
-							width: '30%'
+							width: '30%',
 						}}
 						type='text'
 						placeholder='Enter your email'></input>
-					<Button sx={{ py: 2, px: 5, mr: 10 }} variant='contained'>
+					<button className='bg-slate-200 py-2 px-6 mr-10'>
 						Subscribe
-					</Button>
-				</Stack>
-			</Box>
+					</button>
+				</div>
+			</div>
 		</>
 	);
 };
