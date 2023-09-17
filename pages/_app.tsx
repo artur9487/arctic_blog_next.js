@@ -15,6 +15,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 					href='https://fonts.googleapis.com/css2?family=Alatsi&display=swap'
 					rel='stylesheet'
 				/>
+
+				<link
+					href='https://fonts.googleapis.com/css2?family=Alatsi&family=Alumni+Sans:wght@100&display=swap'
+					rel='stylesheet'
+				/>
 			</Head>
 			<Component {...pageProps} />
 		</>

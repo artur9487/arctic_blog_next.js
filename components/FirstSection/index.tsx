@@ -3,11 +3,13 @@ import Image from 'next/image';
 import CloudQueueIcon from '@mui/icons-material/CloudQueue';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import AirIcon from '@mui/icons-material/Air';
+import { useMediaQuery } from '@mui/material';
 
 const FirstSection: React.FC = () => {
+	const mediaQuery800 = useMediaQuery('min-width:800px');
 	return (
-		<section className='border-4 relative'>
-			<div className='border-4 flex flex-row w-full h-96 mx-auto relative '>
+		<section className=' relative '>
+			<div className='flex flex-row w-full h-96 relative '>
 				<Image
 					src={'/green.jpg'}
 					objectFit='cover'
@@ -16,59 +18,74 @@ const FirstSection: React.FC = () => {
 				/>
 				<div className=' bg-white/[.5] w-1/2 h-full overflow-hidden relative flex'>
 					<div className='absolute top-1/3 right-0'>
-						<span className='drop-shadow-lg md:text-9xl text-6xl text-white z-999 font-bold tracking-normal'>
+						<span className='drop-shadow-lg md:text-9xl text-6xl text-white z-999 font-bold tracking-normal font-alatsi'>
 							GREEN
 						</span>
 					</div>
 				</div>
 				<div className=' relative flex flex-col w-1/2 h-full bg-white/[.5] overflow-hidden z-999'>
 					<div className='h-2/3 '></div>
-					<div className=' md:p-4 h-1/3 w-full border-4'>
-						<span className='md:leading-8 leading-6 text-black italic tracking-normal text-sm'>
+					<div className=' md:p-4 h-1/3 w-full'>
+						<span className='md:leading-8 leading-6 text-black italic font-semibold tracking-normal text-sm'>
 							Curabitur in risus sapien. Donec ex dolor, suscipit ut
 							Wł nisi a, tincidunt laoreet nulla. Donec ex dolor,
 							suscipit ut nisi a, tincidunt laoreet nulla.
 						</span>
 					</div>
 					<div className='absolute left-0 top-1/3  h-2/3 w-full'>
-						<div className=' text-6xl md:text-9xl  text-black z-999 font-bold tracking-normal '>
+						<div className='font-alatsi text-6xl md:text-9xl  text-black z-999 font-bold tracking-normal '>
 							LAND
 						</div>
 					</div>
 				</div>
-				<div className='py-12 px-8 gap-3 drop-shadow-lg rounded-xl justify-start items-start flex flex-col bg-white absolute -left-28 -bottom-28'>
+				<div className='md:py-12 py-6 md:px-8 px-4 gap-3 drop-shadow-lg rounded-xl justify-start items-start flex flex-col bg-white absolute left-2 md:-left-28 -bottom-14 md:-bottom-28'>
 					<div className='flex gap-4 flex-row items-center '>
 						<CloudQueueIcon
-							sx={{ fontSize: 50, color: 'rgb(147, 204, 245)' }}
+							sx={{
+								fontSize: mediaQuery800 ? 50 : 30,
+								color: 'rgb(147, 204, 245)',
+							}}
 						/>
-						<div className='flex flex-col'>
-							<span className='font-gray-400 text-xl  font-thin'>
+						<div className='flex flex-col '>
+							<span className='text-black-600 font-bold md:text-xl text-base'>
 								22 / 10 / 2022
 							</span>
-							<span className='font-gray-400 font-thin'>15C</span>
+							<span className='text-slate-600 text-base md:font-thin text-sm'>
+								15C
+							</span>
 						</div>
 					</div>
 
 					<div className='flex gap-4 flex-row items-center '>
 						<AcUnitIcon
-							sx={{ fontSize: 50, color: 'rgb(137, 241, 245)' }}
+							sx={{
+								fontSize: mediaQuery800 ? 50 : 30,
+								color: 'rgb(137, 241, 245)',
+							}}
 						/>
 						<div className='flex flex-col'>
-							<span className='font-gray-400 text-xl  font-thin'>
+							<span className='text-black-600 font-bold md:text-xl text-base'>
 								Snowy
 							</span>
-							<span className='font-gray-400 font-thin'>50%</span>
+							<span className='text-slate-600 text-base md:font-thin text-sm'>
+								50%
+							</span>
 						</div>
 					</div>
 					<div className='flex gap-4 flex-row items-center '>
 						<AirIcon
-							sx={{ fontSize: 50, color: 'rgb(104, 98, 252)' }}
+							sx={{
+								fontSize: mediaQuery800 ? 50 : 30,
+								color: 'rgb(104, 98, 252)',
+							}}
 						/>
 						<div className='flex flex-col'>
-							<span className='font-gray-400 text-xl font-thin'>
+							<span className='text-black-600 font-bold md:text-xl text-base'>
 								MPH West
 							</span>
-							<span className='font-gray-400 font-thin'>15C</span>
+							<span className='text-slate-600 text-base md:font-thin text-sm'>
+								15C
+							</span>
 						</div>
 					</div>
 				</div>

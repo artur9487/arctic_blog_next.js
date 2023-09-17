@@ -1,15 +1,13 @@
 /** @format */
-
-import { Stack, Typography, Box, Button } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
 
 const SecondSection: React.FC = () => {
 	return (
-		<section>
-			<div className=' flex flex-row gap-32'>
-				<div className='justify-around flex flex-col relative w-2/3  gap-4'>
-					<div className='h-96 w-full relative'>
+		<section className='mt-48'>
+			<div className=' flex md:flex-row flex-col-reverse md:gap-32 gap-16 '>
+				<div className='justify-around flex md:flex-col flex-col-reverse relative w-full md:w-2/3 gap-8 md:gap-4'>
+					<div className='md:h-96 h-[200px] w-full relative'>
 						<Image
 							src={'/gren3.jpg'}
 							objectFit='cover'
@@ -20,7 +18,7 @@ const SecondSection: React.FC = () => {
 					</div>
 					<div></div>
 					<div className='w-2/3 ml-auto text-justify  '>
-						<span className='text-lg items-center font-alatsi tracking-wide leading-7 text-gray-500'>
+						<span className='text-lg items-center tracking-wide leading-7 text-gray-500'>
 							Corem ipsum dolor sit amet, consectetur adipiscing elit.
 							Ut tempus, diam vitae laoreet tempor, libero risus
 							posere lorem, a commodo enim lorem nec lacus.
@@ -28,16 +26,8 @@ const SecondSection: React.FC = () => {
 					</div>
 				</div>
 
-				<Stack
-					justifyContent='space-around'
-					direction={'column-reverse'}
-					sx={{ position: 'relative', width: '40%' }}>
-					<Box
-						sx={{
-							height: 200,
-							width: '100%',
-							position: 'relative',
-						}}>
+				<div className='justify-around flex-col-reverse flex relative md:w-1/3 w-full md:gap-4 gap-8'>
+					<div className='h-[200px] w-full relative'>
 						<Image
 							src={'/gren2.jpg'}
 							objectFit='cover'
@@ -45,11 +35,11 @@ const SecondSection: React.FC = () => {
 							alt='main photo'
 						/>
 						<div className='absolute -z-10 -bottom-8 -right-8 w-full h-full bg-gradient-to-r from-slate-200/[.5] to-slate-200/[.9]'></div>
-					</Box>
+					</div>
 
-					<div className='w-2/3 mr-auto '>
-						<div className='w-full mr-auto text-justify'>
-							<div className='text-2xl font-semibold'>
+					<div className='md:w-2/3 m-full mr-auto '>
+						<div className='md:w-full mr-auto text-justify  w-2/3'>
+							<div className='text-2xl font-extrabold mb-8'>
 								Explore new world
 							</div>
 							<span className='text-lg items-center tracking-wide leading-7 text-gray-500'>
@@ -60,10 +50,8 @@ const SecondSection: React.FC = () => {
 								molestie tortor.
 							</span>
 						</div>
-
-						<Button variant='contained'>Click for more</Button>
 					</div>
-				</Stack>
+				</div>
 			</div>
 		</section>
 	);
