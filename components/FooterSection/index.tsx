@@ -4,25 +4,21 @@ import React from 'react';
 const FooterSection: React.FC = () => {
 	return (
 		<>
-			<div className='w-full h-[200px] bg-slate-100'>
-				<div className='flex flex-row justify-between items-center'>
-					<div className='w-40 h-28 flex justify-center items-center bg-slate-200'>
-						<span className='tracking-widest text-2xl'>
+			<div className='w-full md:h-[200px] h-[150px] bg-slate-100'>
+				<div className='flex flex-row justify-between  w-full h-full'>
+					<div className='px-4 py-4  flex justify-center items-center bg-slate-200'>
+						<span className='tracking-widest md:text-xl text-base'>
 							Subscribe
 						</span>
 					</div>
-					<input
-						style={{
-							height: 30,
-							padding: 25,
-							fontFamily: 'Alatsi',
-							width: '30%',
-						}}
-						type='text'
-						placeholder='Enter your email'></input>
-					<button className='bg-slate-200 py-2 px-6 mr-10'>
-						Subscribe
-					</button>
+					<form className='font-alumni h-full gap-4 flex  mx-auto items-center justify-center flex-col w-1/2'>
+						<input
+							className='h-[30px] p-4 w-full'
+							type='text'
+							placeholder='Enter your email'
+						/>
+						<button className='bg-slate-200 py-2 px-6 '>OK</button>
+					</form>
 				</div>
 			</div>
 		</>
