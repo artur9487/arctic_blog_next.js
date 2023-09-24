@@ -7,7 +7,7 @@ interface layoutSchema {
 }
 
 const Layout: React.FC<layoutSchema> = ({ children }) => {
-	return <Container sx={{ mb: 13 }}>{children}</Container>;
+	return <Container className='mb-20'>{children}</Container>;
 };
 
 export default Layout;
