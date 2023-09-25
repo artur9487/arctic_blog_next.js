@@ -66,17 +66,17 @@ const ThirdSection: React.FC = () => {
 								layout='fill'
 								alt='main photo'
 							/>
-							<div className='flex flex-col gap-2 rounded-xl absolute -bottom-16 -right-16 bg-white shadow-lg shadow-slate-200 w-full p-4'>
-								<span className='text-center md:text-2xl text-xl font-semibold'>
+							<div className='flex flex-col gap-1 rounded-xl absolute -bottom-16 -right-16 bg-white shadow-lg shadow-slate-200 w-full p-2 md:p-4'>
+								<span className='text-center md:text-xl text-base font-semibold tracking-widest'>
 									{title}
 								</span>
 
 								<div className='flex flex-row gap-2'>
-									<div className='flex flex-col justify-center items-center'>
+									<div className='flex flex-col justify-center items-center '>
 										<span className='md:text-base text-sm font-semibold italic'>
 											{author}
 										</span>
-										<div className='relative h-16 w-16'>
+										<div className='relative h-16 w-16 '>
 											<Image
 												src={authorImg}
 												objectFit='cover'
@@ -85,7 +85,7 @@ const ThirdSection: React.FC = () => {
 											/>
 										</div>
 									</div>
-									<span className='italic text-gray-500 md:text-base text-xs text-justify tracking-widest'>
+									<span className='py-4 italic text-gray-500 md:text-sm text-xs text-justify tracking-widest'>
 										{review}
 									</span>
 								</div>
